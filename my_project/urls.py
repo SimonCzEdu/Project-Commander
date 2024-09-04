@@ -20,7 +20,7 @@ from project_commander import views as index_views
 from about import views as about_views
 
 urlpatterns = [
-    path('home/', index_views.index, name='home'),
+    path('', index_views.index, name='home'),
     path('about/', about_views.about, name='about'),
     path('admin/', admin.site.urls),
 ]
