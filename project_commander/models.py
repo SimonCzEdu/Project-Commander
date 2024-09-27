@@ -28,6 +28,9 @@ class Item(models.Model):
     priority = models.IntegerField(choices=PRIORITY, default=0, blank=True)
     item_price = models.DecimalField(max_digits=6, decimal_places=2, blank=True)
 
+    class Meta:
+        ordering = ["priority"]
+
 
 class List(models.Model):
     list_name = models.CharField(max_length=50, unique=True)
