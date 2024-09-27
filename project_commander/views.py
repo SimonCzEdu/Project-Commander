@@ -1,9 +1,7 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.views import generic
+from .models import Item
 
 # Create your views here.
-def index(request):    
-    if request.method == "POST":
-        return HttpResponse("We are POSTING Baby!")
-    elif request.method == "GET":
-        return HttpResponse(request.method)
+class ItemList(generic.ListView):
+    model = Item
