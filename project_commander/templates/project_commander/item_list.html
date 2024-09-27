@@ -5,11 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Views Part 1</title>
+    <title>All Items List</title>
 </head>
 
 <body>
-    Test
+    <h1>List of all items</h1>
+    {% for item in object_list %}
+    <h2>{{item.item_name}}</h2>
+    <p>You currently have {{item.current_quantity}} out of minimum {{item.min_quantity}} </p>
+    <p>Price: {{item.item_price}}</p>
+    <p>You set priority to: {{item.priority}}</p>
+    {% endfor %}
 </body>
-
 </html>
