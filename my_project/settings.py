@@ -28,8 +28,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True
 DEBUG = False
+# DEBUG = True
 
 ALLOWED_HOSTS = [
     "8000-simonczedu-projectcomma-50tohe1cb7o.ws.codeinstitute-ide.net",
@@ -47,7 +47,6 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "project_commander",
-    "about",
 ]
 
 MIDDLEWARE = [
